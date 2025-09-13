@@ -12,10 +12,10 @@
             <a href="#" class="logo">🌊 AquaSphere</a>
             <nav class="nav">
                 <ul class="nav-list">
-                    <li><a href="#">Главная</a></li>
+                    
                     <li><a href="#">Об океанариуме</a></li>
                     <li><a href="#">Обитатели</a></li>
-                    <li><a href="#">Билеты</a></li>
+                    <li><a href="#">Главная</a></li>
                     <li><a href="#">Контакты</a></li>
                 </ul>
             </nav>
@@ -28,14 +28,20 @@
         </div>
     </header>
 
+<li><audio id="bg-music" autoplay loop muted>
+    <source src="audio/ocean-ambient.mp3" type="audio/mpeg">
+    Ваш браузер не поддерживает аудио.
+</audio>
 
+<!-- Кнопка управления звуком -->
+<button id="sound-toggle" class="sound-btn"> Включить звук</button></li>
     <section class="hero">
  
         <div class="decoration floating">🐠</div>
         <div class="decoration floating">🐙</div>
         <div class="decoration floating">🐋</div>
 
-        <h1 class="logo">Голубая Глубина</h1>
+        <h1 class="logo">AquaSphere</h1>
         <p class="subtitle">Погрузитесь в подводный мир, где каждый экспонат — живое чудо природы. Откройте для себя тайны океана вместе с нами.</p>
         <button class="cta-button">Купить билеты</button>
     </section>
@@ -47,6 +53,17 @@
             «Голубая Глубина» — это не просто океанариум, это живой музей мирового океана. У нас представлены более 10 000 морских обитателей из всех уголков планеты: от тропических рифов до ледяных вод Антарктики. Мы проводим образовательные программы, экскурсии с биологами и интерактивные шоу.
         </p>
         <button class="cta-button">Узнать больше</button>
+    </section>
+
+   <section class="about">
+        <h2>Узнайте больше о нашес океанариуме</h2>
+         <div class="video-container">
+                <video autoplay muted loop playsinline>
+        <source src="video/океанариум_видео.mp4" type="video/mp4" title="Видео об океанариуме" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+    </video>
+                
+            </div>
+        
     </section>
    
     <footer class="footer">
@@ -102,5 +119,26 @@
             <div class="floating-bubble delay-2">🫧</div>
         </div>
     </footer>
+    <script>
+    const audio = document.getElementById('bg-music');
+    const toggleBtn = document.getElementById('sound-toggle');
+
+    // Начальное состояние кнопки
+    toggleBtn.classList.add('muted');
+
+    toggleBtn.addEventListener('click', () => {
+        if (audio.muted) {
+            audio.muted = false;
+            toggleBtn.classList.remove('muted');
+            toggleBtn.classList.add('unmuted');
+            toggleBtn.textContent = " Выключить звук";
+        } else {
+            audio.muted = true;
+            toggleBtn.classList.remove('unmuted');
+            toggleBtn.classList.add('muted');
+            toggleBtn.textContent = " Включить звук";
+        }
+    });
+</script>
 </body>
 </html>
