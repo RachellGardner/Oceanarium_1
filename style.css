@@ -1,5 +1,5 @@
 body {
-    font-family: 'Rethink Sans', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Bona Nova SC', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #0c2461, #1e3799, #4a69bd);
     color: #fff;
     overflow-x: hidden;
@@ -51,7 +51,7 @@ body {
     color: rgb(38, 40, 147);
     border: none;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 15px;
     cursor: pointer;
 }
 
@@ -122,10 +122,14 @@ body {
 
 }
 
-.logo-text {
+#hero-title {
     font-size: 30px;
     text-align: center;
 
+}
+#about-title{
+    font-size: 30px;
+    text-align: center;
 }
 
 .title_glube {
@@ -135,7 +139,7 @@ body {
     text-align: center;
 }
 
-.about_ok {
+#video-title {
     font-size: 30px;
     text-align: center;
 }
