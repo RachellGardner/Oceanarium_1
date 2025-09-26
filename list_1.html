@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AquaSphere</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<header class="header">
+    <header class="header">
         <div class="container">
-            <a href="#" class="logo">🌊 AquaSphere</a>
-            <nav class="nav">
+            <a href="/" class="logo" aria-label="На главную страницу AquaSphere">🌊 AquaSphere</a>
+            <nav class="nav" aria-label="Основная навигация">
                 <ul class="nav-list">
-                    
-                    <li><a href="#">Об океанариуме</a></li>
-                    <li><a href="#">Обитатели</a></li>
-                    <li><a href="#">Главная</a></li>
-                    <li><a href="#">Контакты</a></li>
+                    <li><a href="list_1.html">Главная</a></li>
+                    <li><a href="#about">Об океанариуме</a></li>
+                    <li><a href="#inhabitants">Обитатели</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
                 </ul>
             </nav>
-            <button class="ticket-btn">Купить билеты</button>
-            <div class="burger" id="burger">
+            <button class="ticket-btn" aria-label="Купить билеты в океанариум">Купить билеты</button>
+            <div class="burger" id="burger" aria-label="Меню навигации" role="button" tabindex="0">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -28,85 +29,88 @@
         </div>
     </header>
 
-<li><audio id="bg-music" autoplay loop muted>
-    <source src="audio/ocean-ambient.mp3" type="audio/mpeg">
-    Ваш браузер не поддерживает аудио.
-</audio>
+    <audio id="bg-music" autoplay loop muted>
+        <source src="audio/ocean-ambient.mp3" type="audio/mpeg">
+        Ваш браузер не поддерживает аудио.
+    </audio>
+    <button id="sound-toggle" class="sound-btn" aria-pressed="false">Включить звук</button>
 
-<!-- Кнопка управления звуком -->
-<button id="sound-toggle" class="sound-btn"> Включить звук</button></li>
-    <section class="hero">
- 
-        <div class="decoration floating">🐠</div>
-        <div class="decoration floating">🐙</div>
-        <div class="decoration floating">🐋</div>
+    <main>
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="decoration floating" aria-hidden="true">🐠</div>
+            <div class="decoration floating" aria-hidden="true">🐙</div>
+            <div class="decoration floating" aria-hidden="true">🐋</div>
 
-        <h1 class="logo">AquaSphere</h1>
-        <p class="subtitle">Погрузитесь в подводный мир, где каждый экспонат — живое чудо природы. Откройте для себя тайны океана вместе с нами.</p>
-        <button class="cta-button">Купить билеты</button>
-    </section>
+            <h1 id="hero-title" class="logo-text">AquaSphere</h1>
+            <p class="subtitle">Погрузитесь в подводный мир, где каждый экспонат — живое чудо природы. Откройте для себя
+                тайны океана вместе с нами.</p>
+                <div class="cta-button_0" >
+            <button class="cta-button" aria-label="Купить билеты">Купить билеты</button></div>
+        </section>
 
-    
-    <section class="about">
-        <h2>О нашем океанариуме</h2>
-        <p>
-            «Голубая Глубина» — это не просто океанариум, это живой музей мирового океана. У нас представлены более 10 000 морских обитателей из всех уголков планеты: от тропических рифов до ледяных вод Антарктики. Мы проводим образовательные программы, экскурсии с биологами и интерактивные шоу.
-        </p>
-        <button class="cta-button">Узнать больше</button>
-    </section>
+        <section class="about" id="about" aria-labelledby="about-title">
+            <h2 id="about-title" class="about_ok">О нашем океанариуме</h2>
+            <p class="title_glube">
+                «Голубая Глубина» — это не просто океанариум, это живой музей мирового океана. У нас представлены более
+                10 000 морских обитателей из всех уголков планеты: от тропических рифов до ледяных вод Антарктики. Мы
+                проводим образовательные программы, экскурсии с биологами и интерактивные шоу.
+            </p>
+             <div class="cta-button_0" >
+            <button class="cta-button" aria-label="Узнать больше об океанариуме">Узнать больше</button></div>
+        </section>
 
-   <section class="about">
-        <h2>Узнайте больше о нашес океанариуме</h2>
-         <div class="video-container">
-                <video autoplay muted loop playsinline>
-        <source src="video/океанариум_видео.mp4" type="video/mp4" title="Видео об океанариуме" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-    </video>
-                
+        <section class="about" aria-labelledby="video-title">
+            <h2 id="video-title" class="about_ok">Узнайте больше о нашем океанариуме</h2>
+            <div class="video-container">
+                <video autoplay muted loop playsinline aria-label="Видео-экскурсия по океанариуму">
+                    <source src="video/океанариум_видео.mp4" type="video/mp4">
+                    Ваш браузер не поддерживает видео.
+                </video>
             </div>
-        
-    </section>
-   
-    <footer class="footer">
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
         <div class="footer-container">
             <div class="footer-logo-section">
                 <h3>AquaSphere</h3>
                 <p>Погрузитесь в мир океана — место, где оживают морские легенды.</p>
-                <div class="socials">
-                    <a href="https://vt.tiktok.com/ZSDFt7d8c/" aria-label="TikTok">🐙</a>
-                    <a href="https://vk.com/feed" aria-label="Vk">🐋</a>
-                    <a href="https://youtu.be/68jMT1TtMag?si=PojdJVUoZ07kSF8J" aria-label="YouTube">🦈</a>
-                    <a href="https://t.me/oceanariummsk" aria-label="Telegram">🦀</a>
+                <div class="socials" aria-label="Наши социальные сети">
+                    <a href="https://vt.tiktok.com/ZSDFt7d8c/" aria-label="Наш TikTok">🐙</a>
+                    <a href="https://vk.com/feed" aria-label="Наша страница ВКонтакте">🐋</a>
+                    <a href="https://youtu.be/68jMT1TtMag?si=PojdJVUoZ07kSF8J" aria-label="Наш YouTube-канал">🦈</a>
+                    <a href="https://t.me/oceanariummsk" aria-label="Наш Telegram-канал">🦀</a>
                 </div>
             </div>
 
             <div class="footer-links">
                 <h4>Навигация</h4>
                 <ul>
-                    <li><a href="#">Главная</a></li>
-                    <li><a href="#">Об океанариуме</a></li>
-                    <li><a href="#">Обитатели</a></li>
-                    <li><a href="#">Билеты</a></li>
-                    <li><a href="#">Контакты</a></li>
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="#about">Об океанариуме</a></li>
+                    <li><a href="#inhabitants">Обитатели</a></li>
+                    <li><a href="#tickets">Билеты</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
                 </ul>
             </div>
 
             <div class="footer-links">
                 <h4>Посетителям</h4>
                 <ul>
-                    <li><a href="#">Расписание шоу</a></li>
-                    <li><a href="#">Экскурсии</a></li>
-                    <li><a href="#">Кафе и сувениры</a></li>
-                    <li><a href="#">Правила посещения</a></li>
-                    <li><a href="#">Для школ</a></li>
+                    <li><a href="#shows">Расписание шоу</a></li>
+                    <li><a href="#tours">Экскурсии</a></li>
+                    <li><a href="#cafe">Кафе и сувениры</a></li>
+                    <li><a href="#rules">Правила посещения</a></li>
+                    <li><a href="#schools">Для школ</a></li>
                 </ul>
             </div>
 
-            <div class="footer-contact">
+            <div class="footer-contact" id="contacts">
                 <h4>Контакты</h4>
                 <address>
                     📍 г. Москва, ул. Океанская, 1<br>
                     📞 +7 (495) 123-45-67<br>
-                    ✉️ info@golubaya-glubina.ru<br>
+                    ✉️ <a href="mailto:info@golubaya-glubina.ru">info@golubaya-glubina.ru</a><br>
                     ⏰ Ежедневно с 10:00 до 20:00
                 </address>
             </div>
@@ -114,31 +118,33 @@
 
         <div class="footer-bottom">
             <p>&copy; 2025 Океанариум «AquaSphere». Все права защищены. 🐠</p>
-            <div class="floating-bubble">🫧</div>
-            <div class="floating-bubble delay-1">🫧</div>
-            <div class="floating-bubble delay-2">🫧</div>
+
         </div>
     </footer>
+
     <script>
-    const audio = document.getElementById('bg-music');
-    const toggleBtn = document.getElementById('sound-toggle');
+        const audio = document.getElementById('bg-music');
+        const toggleBtn = document.getElementById('sound-toggle');
 
-    // Начальное состояние кнопки
-    toggleBtn.classList.add('muted');
+        toggleBtn.classList.add('muted');
+        toggleBtn.setAttribute('aria-pressed', 'false');
 
-    toggleBtn.addEventListener('click', () => {
-        if (audio.muted) {
-            audio.muted = false;
-            toggleBtn.classList.remove('muted');
-            toggleBtn.classList.add('unmuted');
-            toggleBtn.textContent = " Выключить звук";
-        } else {
-            audio.muted = true;
-            toggleBtn.classList.remove('unmuted');
-            toggleBtn.classList.add('muted');
-            toggleBtn.textContent = " Включить звук";
-        }
-    });
-</script>
+        toggleBtn.addEventListener('click', () => {
+            if (audio.muted) {
+                audio.muted = false;
+                toggleBtn.classList.remove('muted');
+                toggleBtn.classList.add('unmuted');
+                toggleBtn.textContent = "Выключить звук";
+                toggleBtn.setAttribute('aria-pressed', 'true');
+            } else {
+                audio.muted = true;
+                toggleBtn.classList.remove('unmuted');
+                toggleBtn.classList.add('muted');
+                toggleBtn.textContent = "Включить звук";
+                toggleBtn.setAttribute('aria-pressed', 'false');
+            }
+        });
+    </script>
 </body>
+
 </html>
